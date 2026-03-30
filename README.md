@@ -24,8 +24,7 @@ I develop statistical methods and machine learning tools for cardiovascular outc
 
 ## Research Interests
 
-Applied statistics · Machine learning · Survival & time-to-event analysis
-Longitudinal data · Cardiovascular outcomes · Reproducible research
+Applied statistical machine learning research conducted in close collaboration with cardiovascular surgeons and clinicians. Methodological focus spans random forest and ensemble methods, clustering, deep learning, and time series analysis, with emphasis on time-to-event and longitudinal data in cardiovascular outcomes. A sustained focus is the translation of methodological advances into clinical practice through open-source software development and reproducible analytical workflows, with current work centered on an R implementation of multi-phase hazard analysis methods.
 
 ---
 
