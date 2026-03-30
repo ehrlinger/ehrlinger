@@ -1,6 +1,6 @@
 # John Ehrlinger, PhD
 
-**Lead Data Scientist** · Cardiovascular Outcomes, Registries and Research (CORR)
+**Assistant Staff - Lead Data Scientist** · Cardiovascular Outcomes, Registries and Research (CORR)
 Heart, Vascular & Thoracic Institute · Cleveland Clinic
 
 I develop statistical methods and machine learning tools for cardiovascular outcomes research — with a focus on survival analysis, longitudinal data, and reproducible clinical workflows.
