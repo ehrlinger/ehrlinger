@@ -6,7 +6,7 @@ Heart, Vascular & Thoracic Institute · Cleveland Clinic
 
 I develop statistical methods and machine learning tools for cardiovascular outcomes research — with a focus on survival analysis, longitudinal data, and reproducible clinical workflows.
 
-📄 [CV (PDF)](https://ehrlinger.github.io/CV/JohnEhrlinger-CV.pdf) &nbsp;|&nbsp; 🔗 [LinkedIn](https://linkedin.com/in/ehrlinger) &nbsp;|&nbsp; 📘 [ORCID](https://orcid.org/0000-0002-5340-5154)
+📄 [CV (PDF)](https://ehrlinger.github.io/CV/JohnEhrlinger-CV.pdf) &nbsp;|&nbsp; 📝 [CV (Web)](https://github.com/ehrlinger/CV/blob/gh-pages/JohnEhrlinger-CV.md) &nbsp;|&nbsp; 🔗 [LinkedIn](https://linkedin.com/in/ehrlinger) &nbsp;|&nbsp; 📘 [ORCID](https://orcid.org/0000-0002-5340-5154)
 
 ---
 
