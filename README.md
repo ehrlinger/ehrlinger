@@ -15,11 +15,11 @@ I develop statistical methods and machine learning tools for cardiovascular outc
 | Package | Description |
 |---|---|
 | [ggRandomForests](https://github.com/ehrlinger/ggRandomForests) | Visual exploration of random forest models (survival, regression, classification) via `randomForestSRC` and `ggplot2` |
-| [boostmtree](https://github.com/ehrlinger/boostmtree) | Boosted multivariate trees for flexible modeling of multivariate continuous longitudinal outcomes |
 | [hazard](https://github.com/ehrlinger/hazard) | SAS and C implementation of multi-phase hazard analysis for time-to-event decomposition. (Maintainer) |
-| [mixhazard](https://github.com/ehrlinger/mixhazard) | R port of the C computational core underlying the Cleveland Clinic Hazard SAS module |
+| [TemporalHazard](https://github.com/ehrlinger/temporal_hazard) | R port of the Hazard SAS/C code [hazard](https://github.com/ehrlinger/hazard)  |
 | [hvtiPlotR](https://github.com/ehrlinger/hvtiPlotR) | Publication-quality graphics conforming to HVTI statistical reporting standards |
 | [hvtiRutilities](https://github.com/ehrlinger/hvtiRutilities) | Utility functions for reproducible research workflows within the Heart, Vascular & Thoracic Institute |
+| [boostmtree](https://github.com/ehrlinger/boostmtree) | Boosted multivariate trees for flexible modeling of multivariate continuous longitudinal outcomes |
 
 ---
 
