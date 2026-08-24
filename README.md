@@ -21,13 +21,13 @@ I develop statistical methods and machine learning tools for cardiovascular outc
 
 ### The HVTI R package family
 
-[`hvtiR`](https://github.com/ehrlinger/hvtiR) installs and version-checks the family as a
-unit: eleven member packages — the nine below, plus `ggRandomForests` and
-`TemporalHazard` above.
+[`hvtiR`](https://github.com/ehrlinger/hvtiR) — a one-command installer, version status
+table, and environment diagnostic — resolves the family from public GitHub repositories
+and version-checks it as a unit: eleven member packages, the nine below plus
+`ggRandomForests` and `TemporalHazard` above.
 
 | Package | Description |
 |---|---|
-| [hvtiR](https://github.com/ehrlinger/hvtiR) | One-command installer, version status table, and environment diagnostic for the family; members resolve from public GitHub repositories |
 | [hvtiBoostmtree](https://github.com/ehrlinger/hvtiBoostmtree) | Boosted multivariate trees for longitudinal data; an extended fork of boostmtree |
 | [hvtiPlotR](https://github.com/ehrlinger/hvtiPlotR) | Publication-quality graphics conforming to HVTI statistical reporting standards |
 | [hvtiRbootstrap](https://github.com/ehrlinger/hvtiRbootstrap) | Bootstrap model building — fit across many replicates and report how often each variable survives selection; an R port of the `bootreg` / `SUMBOOT` / `cluster` SAS macros (in active development) |
