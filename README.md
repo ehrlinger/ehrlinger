@@ -21,9 +21,9 @@ I develop statistical methods and machine learning tools for cardiovascular outc
 
 ### The HVTI R package family
 
-Eleven coordinated R packages behind the CORR analytic pipeline — installed, updated and
-version-checked as a unit with [`hvtiR`](https://github.com/ehrlinger/hvtiR).
-`ggRandomForests` and `TemporalHazard`, above, are members too.
+[`hvtiR`](https://github.com/ehrlinger/hvtiR) installs and version-checks the family as a
+unit: eleven member packages — the nine below, plus `ggRandomForests` and
+`TemporalHazard` above.
 
 | Package | Description |
 |---|---|
