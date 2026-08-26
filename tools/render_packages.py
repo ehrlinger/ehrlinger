@@ -76,14 +76,42 @@ def render_block(manifest: dict) -> str:
     standalone = [p for p in pkgs if p["family"] == "standalone"]
     book = [p for p in pkgs if p["family"] == "book"]
 
+    # The sentence and the tables are rendered from the same manifest, so a
+    # count that disagrees with the package list is an upstream defect. Say so
+    # rather than publishing a sentence that contradicts the table beneath it.
+    members = len(cran_members) + len(github_only)
+    if counts.get("members") != members:
+        raise ValueError(
+            f"manifest counts.members is {counts.get('members')} but it lists "
+            f"{members} members"
+        )
+    if counts.get("members_github_only") != len(github_only):
+        raise ValueError(
+            f"manifest counts.members_github_only is "
+            f"{counts.get('members_github_only')} but it lists {len(github_only)}"
+        )
+    known = {p["package"] for p in cran_members}
+    unknown = [n for n in manifest["cran_member_names"] if n not in known]
+    if unknown:
+        raise ValueError(
+            f"manifest cran_member_names lists {', '.join(unknown)}, "
+            "which is not a member carrying a cran field"
+        )
+
     # The counts below are derived, never authored: this sentence used to be
     # maintained by hand in three repositories and drifted from the lists.
     sentence = (
         f"[`hvtiR`]({INSTALLER_URL}) — a one-command installer, version status\n"
         "table, and environment diagnostic — resolves the family from public GitHub repositories\n"
         f"and version-checks it as a unit: {number_word(counts['members'])} member packages, "
-        f"the {number_word(counts['members_github_only'])} below plus\n"
-        f"{_join(manifest['cran_member_names'])} above."
+        + (
+            f"the {number_word(counts['members_github_only'])} below plus\n"
+            f"{_join(manifest['cran_member_names'])} above."
+            if manifest["cran_member_names"]
+            # With no CRAN member there is nothing "above" to point at, and a
+            # dangling "plus above." is worse than the simpler sentence.
+            else "listed below."
+        )
     )
 
     return "\n".join([

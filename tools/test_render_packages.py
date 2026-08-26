@@ -168,9 +168,6 @@ class IdempotenceTests(unittest.TestCase):
         self.assertEqual(once, twice)
 
 
-if __name__ == "__main__":
-    unittest.main()
-
 
 class PunctuationTests(unittest.TestCase):
     """Blurbs are full sentences; decorations must not read as a second one."""
@@ -238,3 +235,53 @@ class NetworkFailureTests(unittest.TestCase):
                 rp.load_manifest("https://example.org/m.json")
         finally:
             rp.fetch_text = rp._fetch_text
+
+
+class NoCranMemberTests(unittest.TestCase):
+    """The family need not always contain a CRAN member."""
+
+    def _manifest(self):
+        m = json.loads(json.dumps(MANIFEST))
+        for p in m["packages"]:
+            p["cran"] = None
+        m["cran_member_names"] = []
+        m["counts"] = {"members": 4, "members_on_cran": 0, "members_github_only": 4}
+        return m
+
+    def test_the_sentence_does_not_dangle_a_plus_with_nothing_after_it(self):
+        block = render_block(self._manifest())
+        self.assertNotIn("plus\n above", block)
+        self.assertNotIn(" above.", block)
+
+    def test_the_sentence_says_all_members_are_listed_below(self):
+        self.assertIn("four member packages, listed below.", render_block(self._manifest()))
+
+    def test_both_tables_remain_since_the_book_and_sas_code_still_exist(self):
+        # The first table is not "the CRAN table" -- it also carries the SAS/C
+        # code and the book, which exist regardless of any CRAN membership.
+        block = render_block(self._manifest())
+        self.assertEqual(block.count("| Package | Description |"), 2)
+        self.assertIn("/sassy)", block)
+        self.assertIn("The Book", block)
+
+
+class CountDriftTests(unittest.TestCase):
+    """Manifest counts must agree with its own package list."""
+
+    def test_a_members_count_that_contradicts_the_packages_is_an_error(self):
+        m = json.loads(json.dumps(MANIFEST))
+        m["counts"]["members"] = 99
+        with self.assertRaises(ValueError) as ctx:
+            render_block(m)
+        self.assertIn("members", str(ctx.exception))
+
+    def test_a_cran_name_absent_from_the_packages_is_an_error(self):
+        m = json.loads(json.dumps(MANIFEST))
+        m["cran_member_names"] = ["nonexistent"]
+        with self.assertRaises(ValueError) as ctx:
+            render_block(m)
+        self.assertIn("nonexistent", str(ctx.exception))
+
+
+if __name__ == "__main__":
+    unittest.main()
