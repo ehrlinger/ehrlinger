@@ -2,7 +2,7 @@
 
 **Assistant Staff, Lead Data Scientist** · Cardiovascular Outcomes, Registries and Research (CORR)
 Heart, Vascular & Thoracic Institute · Cleveland Clinic
-**Clinical Assistant Professor** (Joint Appointment) · Cleveland Clinic Lerner College of Medicine
+**Assistant Professor of Surgery** (Joint Appointment) · Cleveland Clinic Lerner College of Medicine
 
 I develop statistical methods and machine learning tools for cardiovascular outcomes research — with a focus on survival analysis, longitudinal data, and reproducible clinical workflows.
 
