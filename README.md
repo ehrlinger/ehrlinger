@@ -29,7 +29,7 @@ and version-checks it as a unit: eleven member packages, the nine below plus
 
 | Package | Description |
 |---|---|
-| [hvtiBoostmtree](https://github.com/ehrlinger/hvtiBoostmtree) | Boosted multivariate trees for longitudinal data; an extended fork of boostmtree. |
+| [ggBoostedTrees](https://github.com/ehrlinger/ggBoostedTrees) | Visual exploration of boosted tree models — graphical analysis of boostmtree and BoostMLR fits for longitudinal responses. (in active development) |
 | [hvtiPlotR](https://github.com/ehrlinger/hvtiPlotR) | HVTI-standard publication graphics for reproducible clinical research figures. |
 | [hvtiRbootstrap](https://github.com/ehrlinger/hvtiRbootstrap) | Bootstrap model building — fit across many replicates and report how often each variable survives selection; an R port of the bootreg, SUMBOOT and cluster SAS macros. (in active development) |
 | [hvtiRdatabuild](https://github.com/ehrlinger/hvtiRdatabuild) | Analysis-ready clinical datasets for HVTI CORR studies, verified against the legacy SAS datasets they replace. (in active development) |
