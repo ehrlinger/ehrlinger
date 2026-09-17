@@ -1,6 +1,6 @@
 # John Ehrlinger, PhD
 
-**Assistant Staff, Lead Data Scientist** · Cardiovascular Outcomes, Registries and Research (CORR)
+**Associate Staff, Lead Data Scientist** (effective October 2026) · Cardiovascular Outcomes, Registries and Research (CORR)
 Heart, Vascular & Thoracic Institute · Cleveland Clinic
 **Assistant Professor of Surgery** (Joint Appointment) · Cleveland Clinic Lerner College of Medicine
 
