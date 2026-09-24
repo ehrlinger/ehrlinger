@@ -38,6 +38,16 @@ MANIFEST = {
 }
 
 
+def _with_second_wip():
+    """MANIFEST plus a wip member listed after beta but sorting before it."""
+    m = json.loads(json.dumps(MANIFEST))
+    m["packages"].insert(4, {
+        "package": "alef", "repo": "ehrlinger/alef", "url": "https://github.com/ehrlinger/alef",
+        "family": "member", "blurb": "Fifth.", "cran": None, "status": "wip", "role": None})
+    m["counts"] = {"members": 5, "members_on_cran": 1, "members_github_only": 4}
+    return m
+
+
 class TableSplitTests(unittest.TestCase):
     def setUp(self):
         self.block = render_block(MANIFEST)
@@ -60,7 +70,13 @@ class TableSplitTests(unittest.TestCase):
 
     def test_second_table_holds_only_github_only_members(self):
         names = [r.split("[")[1].split("]")[0] for r in self.second[2:]]
-        self.assertEqual(names, ["beta", "gamma", "delta"])
+        self.assertEqual(names, ["delta", "gamma", "beta"])
+
+    def test_stable_members_precede_wip_members_each_group_alphabetical(self):
+        self.block = render_block(_with_second_wip())
+        _, second = self._tables()
+        names = [r.split("[")[1].split("]")[0] for r in second[2:]]
+        self.assertEqual(names, ["delta", "gamma", "alef", "beta"])
 
     def test_a_cran_member_never_appears_twice(self):
         self.assertEqual(self.block.count("](https://github.com/ehrlinger/alpha)"), 1)
