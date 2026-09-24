@@ -66,13 +66,24 @@ def _table(packages: list[dict]) -> str:
     return "\n".join([header, *(_row(p) for p in packages)])
 
 
+def _stable_first(packages: list[dict]) -> list[dict]:
+    """Stable members before wip ones, alphabetical within each group.
+
+    Keyed on status rather than version, so the grouping always agrees with
+    the "in active development" marker and only moves when a status changes,
+    not on every release.
+    """
+    return sorted(packages, key=lambda p: (p["status"] == "wip", p["package"].lower()))
+
+
 def render_block(manifest: dict) -> str:
     """Build the generated region: two tables around the family paragraph."""
     pkgs = manifest["packages"]
     counts = manifest["counts"]
 
     cran_members = [p for p in pkgs if p["family"] == "member" and p["cran"]]
-    github_only = [p for p in pkgs if p["family"] == "member" and not p["cran"]]
+    github_only = _stable_first(
+        [p for p in pkgs if p["family"] == "member" and not p["cran"]])
     standalone = [p for p in pkgs if p["family"] == "standalone"]
     book = [p for p in pkgs if p["family"] == "book"]
 

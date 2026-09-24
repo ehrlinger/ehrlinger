@@ -29,16 +29,16 @@ and version-checks it as a unit: twelve member packages, the ten below plus
 
 | Package | Description |
 |---|---|
-| [ggBoostedTrees](https://github.com/ehrlinger/ggBoostedTrees) | Visual exploration of boosted tree models — graphical analysis of boostmtree and BoostMLR fits for longitudinal responses. (in active development) |
 | [hvtiPlotR](https://github.com/ehrlinger/hvtiPlotR) | HVTI-standard publication graphics for reproducible clinical research figures. |
+| [hvtiRtables](https://github.com/ehrlinger/hvtiRtables) | Manuscript-compliant Word tables from gtsummary objects, following HVTI CORR table construction standards, with a JTCVS submission mode. |
+| [hvtiRtemplates](https://github.com/ehrlinger/hvtiRtemplates) | Versioned analysis job templates and the analysis-prefix taxonomy the CORR group organizes jobs by, so a study binds to a versioned template rather than to a copy. |
+| [hvtiRutilities](https://github.com/ehrlinger/hvtiRutilities) | Utility functions supporting reproducible HVTI research workflows. |
+| [ggBoostedTrees](https://github.com/ehrlinger/ggBoostedTrees) | Visual exploration of boosted tree models — graphical analysis of boostmtree and BoostMLR fits for longitudinal responses. (in active development) |
 | [hvtiRbootstrap](https://github.com/ehrlinger/hvtiRbootstrap) | Bootstrap model building — fit across many replicates and report how often each variable survives selection; an R port of the bootreg, SUMBOOT and cluster SAS macros. (in active development) |
 | [hvtiRdatabuild](https://github.com/ehrlinger/hvtiRdatabuild) | Analysis-ready clinical datasets for HVTI CORR studies, verified against the legacy SAS datasets they replace. (in active development) |
 | [hvtiRimputation](https://github.com/ehrlinger/hvtiRimputation) | Missing value imputation — fill by a stated method and return a row-level record of exactly which values were changed; an R port of the CORR group's PROC STANDARD REPLACE and imputsub macros. (in active development) |
 | [hvtiRlifetables](https://github.com/ehrlinger/hvtiRlifetables) | Age-, sex- and race-matched US reference survival; replaces the usmatchd SAS macro by evaluating a stored three-phase parametric hazard fit rather than interpolating a life table. (in active development) |
 | [hvtiRpropensity](https://github.com/ehrlinger/hvtiRpropensity) | Propensity score estimation, matching and IPTW with standardized balance diagnostics, for cardiac surgery comparative-effectiveness research. (in active development) |
-| [hvtiRtables](https://github.com/ehrlinger/hvtiRtables) | Manuscript-compliant Word tables from gtsummary objects, following HVTI CORR table construction standards, with a JTCVS submission mode. |
-| [hvtiRtemplates](https://github.com/ehrlinger/hvtiRtemplates) | Versioned analysis job templates and the analysis-prefix taxonomy the CORR group organizes jobs by, so a study binds to a versioned template rather than to a copy. |
-| [hvtiRutilities](https://github.com/ehrlinger/hvtiRutilities) | Utility functions supporting reproducible HVTI research workflows. |
 <!-- END:packages -->
 
 ---
